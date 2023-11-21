@@ -1,0 +1,16 @@
+import numpy as np
+
+# Step 1: 2つの行列を定義する
+a = np.array([[0, 1], [2, 3],[4,5]])
+b = np.array([[0,1,2,3], [4,5,6,7]])
+
+# Step 2: 行列の積を計算する
+result = np.dot(a, b)
+
+# Step 3: 計算された行列の結果を表示する
+print("計算結果:")
+print(result)
+
+# Step 4: 計算された行列の要素の最大値を求めて表示する
+max_value = np.max(result)
+print("計算結果の要素の最大値:", max_value)
