@@ -1,0 +1,35 @@
+# Step1: matplotlib.pyplotとnumpyをインポート
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Step2: 6つのグラフを表示する領域を作成
+nrows, ncols = 2, 3
+fig, axes = plt.subplots(nrows, ncols, tight_layout=True)
+
+# Step3: 各領域に折れ線グラフ、sin関数、ヒストグラム、散布図のデータを表示
+# 折れ線グラフ
+y0 = [1, 2, -5, 2]
+axes[0, 0].plot(y0)
+axes[0, 0].set_title('Line Plot')
+
+# sin関数
+x1 = np.linspace(0, 2 * np.pi, 100)
+y1 = np.sin(x1)
+axes[0, 1].plot(x1, y1)
+axes[0, 1].set_title('Sin Function')
+
+# ヒストグラム
+data2 = np.random.randn(1000)
+axes[0, 2].hist(data2, bins=30, color='green', alpha=0.7)
+axes[0, 2].set_title('Histogram')
+
+# 散布図
+x3 = np.random.rand(50)
+y3 = np.random.rand(50)
+axes[1, 0].scatter(x3, y3)
+axes[1, 0].set_title('Scatter Plot')
+
+# 他の2領域は記載なし
+
+# 描画
+plt.show()
